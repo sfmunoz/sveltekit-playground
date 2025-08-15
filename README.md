@@ -9,6 +9,7 @@ This is a natural follow up on the following projects since I'm looking up the b
 Contents:
 
 - [References](#references)
+- [Steps](#steps)
 - [sv (original doc)](#sv-original-doc)
   - [Creating a project](#creating-a-project)
   - [Developing](#developing)
@@ -22,6 +23,13 @@ Contents:
   - [https://svelte.dev/docs/cli](https://svelte.dev/docs/cli)
 - [https://github.com/sveltejs/svelte](https://github.com/sveltejs/svelte)
 - [https://vite.dev/](https://vite.dev/)
+
+## Steps
+
+- `pnpm dlx sv create --template minimal --types ts --no-add-ons --no-install sveltekit-playground`
+  - Ref: https://svelte.dev/docs/cli/sv-create
+  - `npx sv create [options] [path]`
+  - Since I'm using **pnpm** I replaced **npx** with **pnpm dlx**
 
 ## sv (original doc)
 
