@@ -30,6 +30,8 @@ Contents:
   - Ref: https://svelte.dev/docs/cli/sv-create
   - `npx sv create [options] [path]`
   - Since I'm using **pnpm** I replaced **npx** with **pnpm dlx**
+- `pnpm install`
+- `pnpm run dev`
 
 ## sv (original doc)
 
