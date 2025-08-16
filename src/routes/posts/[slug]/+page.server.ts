@@ -1,9 +1,13 @@
 import type { PageServerLoad } from "./$types";
 import { error } from "@sveltejs/kit";
-import { posts } from "$lib/data/posts";
+import { marked } from "marked";
+import { getPosts } from "$lib/getPosts";
 
 export const load = (async ({ params }) => {
-  const post = posts.find((post) => post.slug === params.slug);
+  const post = getPosts().find((post) => post.slug === params.slug);
   if (!post) throw error(404);
-  return post;
+  return {
+    ...post,
+    html: marked(post.body),
+  };
 }) satisfies PageServerLoad;

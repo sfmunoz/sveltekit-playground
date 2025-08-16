@@ -3,5 +3,15 @@
   let { data }: PageProps = $props();
 </script>
 
-<h1>{data.title} (slug = "{data.slug}")</h1>
-<p>{data.content}</p>
+<table>
+  <tbody>
+    <tr><td>title</td><td>{data.meta.title}</td></tr>
+    <tr><td>date</td><td>{data.meta.date.toISOString()}</td></tr>
+    <tr
+      ><td>url</td><td><a href="/posts/{data.slug}">/posts/{data.slug}</a></td
+      ></tr
+    >
+  </tbody>
+</table>
+
+<p>{@html data.html}</p>

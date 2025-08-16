@@ -1,6 +1,6 @@
 import type { PageServerLoad } from "./$types";
-import { posts } from "$lib/data/posts";
+import { getPosts } from "$lib/getPosts";
 
 export const load = (async () => {
-  return { posts };
+  return { posts: getPosts() };
 }) satisfies PageServerLoad;
