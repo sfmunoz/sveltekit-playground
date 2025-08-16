@@ -8,9 +8,21 @@
   <link rel="icon" href={favicon} />
 </svelte:head>
 
-<nav>
-  <a href="/">home</a>
-  <a href="/posts">posts</a>
-</nav>
+<header>
+  <nav>
+    <a href="/">home</a>
+    <a href="/posts">posts</a>
+  </nav>
+  <h1>SvelteKit playground</h1>
+  <p>SvelteKit playground</p>
+</header>
 
-{@render children?.()}
+<main>{@render children?.()}</main>
+
+<footer>
+  <p>
+    <a href="https://github.com/sfmunoz/sveltekit-playground"
+      >https://github.com/sfmunoz/sveltekit-playground</a
+    >
+  </p>
+</footer>

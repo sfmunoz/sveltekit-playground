@@ -1,3 +1,3 @@
 <h1>SvelteKit playground</h1>
 
-<p>SvelteKit playground</p>
+<p><a href="posts/">posts</a></p>
