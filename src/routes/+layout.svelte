@@ -1,6 +1,6 @@
 <script lang="ts">
   import favicon from "$lib/assets/favicon.svg";
-
+  import { resolve } from "$app/paths";
   let { children } = $props();
 </script>
 
@@ -10,8 +10,8 @@
 
 <header>
   <nav>
-    <a href="/">home</a>
-    <a href="/posts">posts</a>
+    <a href={resolve("/")}>home</a>
+    <a href={resolve("/posts")}>posts</a>
   </nav>
   <h1>SvelteKit playground</h1>
   <p>SvelteKit playground</p>
