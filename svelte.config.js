@@ -12,7 +12,11 @@ const config = {
 			fallback: undefined,
 			precompress: false,
 			strict: true
-		})
+		}),
+		paths: {
+			// https://vite.dev/guide/env-and-mode.html#modes
+			base: process.env.NODE_ENV === "production" ? "/sveltekit-playground" : "",
+		}
 	}
 };
 

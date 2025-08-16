@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { resolve } from "$app/paths";
   import type { PageProps } from "./$types";
   let { data }: PageProps = $props();
 </script>
@@ -8,7 +9,7 @@
 <ul>
   {#each data.posts as post (post.slug)}
     <li>
-      <a href={`/posts/${post.slug}`}
+      <a href={resolve(`/posts/${post.slug}`)}
         >{post.meta.title} - {post.meta.date.toISOString()}</a
       >
     </li>
