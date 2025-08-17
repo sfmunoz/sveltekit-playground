@@ -2,7 +2,7 @@
   import "../app.css";
   import favicon from "$lib/assets/favicon.svg";
   import { resolve } from "$app/paths";
-  
+
   let { children } = $props();
 </script>
 
@@ -10,18 +10,17 @@
   <link rel="icon" href={favicon} />
 </svelte:head>
 
-<header>
+<header class="prose mx-auto">
   <nav>
     <a href={resolve("/")}>home</a>
     <a href={resolve("/posts")}>posts</a>
   </nav>
-  <h1>SvelteKit playground</h1>
-  <p>SvelteKit playground</p>
+  <h3>SvelteKit playground</h3>
 </header>
 
-<main>{@render children?.()}</main>
+<main class="prose mx-auto">{@render children?.()}</main>
 
-<footer>
+<footer class="prose mx-auto">
   <p>
     <a href="https://github.com/sfmunoz/sveltekit-playground"
       >https://github.com/sfmunoz/sveltekit-playground</a
