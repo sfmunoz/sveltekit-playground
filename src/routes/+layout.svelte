@@ -32,22 +32,13 @@
   </Navbar>
 </header>
 
-<main class="prose mx-auto">{@render children?.()}</main>
-
-<footer class="prose mx-auto">
-  <p>
-    <a href="https://github.com/sfmunoz/sveltekit-playground"
-      >https://github.com/sfmunoz/sveltekit-playground</a
-    >
-  </p>
-</footer>
+<main>{@render children?.()}</main>
 
 <Footer footerType="default">
   <div class="mx-auto max-w-screen-xl text-center">
     <FooterBrand
-      href={resolve("/")}
-      alt="SvelteKit playground"
-      name="SvelteKit playground"
+      href="https://github.com/sfmunoz/sveltekit-playground"
+      name="SvelteKit playground @ Github"
       aClass="flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white"
     />
     <p class="my-6 text-gray-500 dark:text-gray-400">
