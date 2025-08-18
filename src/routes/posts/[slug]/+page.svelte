@@ -2,18 +2,32 @@
   import { resolve } from "$app/paths";
   import type { PageProps } from "./$types";
   let { data }: PageProps = $props();
+  import {
+    Table,
+    TableBody,
+    TableBodyCell,
+    TableBodyRow,
+  } from "flowbite-svelte";
 </script>
 
-<table>
-  <tbody>
-    <tr><td>title</td><td>{data.meta.title}</td></tr>
-    <tr><td>date</td><td>{data.meta.date.toISOString()}</td></tr>
-    <tr
-      ><td>url</td><td
-        ><a href={resolve(`/posts/${data.slug}`)}>/posts/{data.slug}</a></td
-      ></tr
-    >
-  </tbody>
-</table>
+<div class="mx-auto prose">{@html data.html}</div>
 
-<p>{@html data.html}</p>
+<Table class="mx-auto max-w-fit">
+  <TableBody>
+    <TableBodyRow>
+      <TableBodyCell>title</TableBodyCell>
+      <TableBodyCell>{data.meta.title}</TableBodyCell>
+    </TableBodyRow>
+    <TableBodyRow>
+      <TableBodyCell>date</TableBodyCell>
+      <TableBodyCell>{data.meta.date.toISOString()}</TableBodyCell>
+    </TableBodyRow>
+    <TableBodyRow>
+      <TableBodyCell>url</TableBodyCell>
+      <TableBodyCell
+        ><a href={resolve(`/posts/${data.slug}`)}>/posts/{data.slug}</a
+        ></TableBodyCell
+      >
+    </TableBodyRow>
+  </TableBody>
+</Table>
