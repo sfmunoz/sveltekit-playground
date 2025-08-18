@@ -45,6 +45,9 @@ importers:
       flowbite-svelte:
         specifier: ^1.12.6
         version: 1.12.6(rollup@4.46.2)(svelte@5.38.1)(tailwindcss@4.1.12)
+      flowbite-svelte-icons:
+        specifier: ^2.3.0
+        version: 2.3.0(svelte@5.38.1)
       svelte:
         specifier: ^5.0.0
         version: 5.38.1
@@ -655,6 +658,11 @@ packages:
 
   flowbite-datepicker@1.3.2:
     resolution: {integrity: sha512-6Nfm0MCVX3mpaR7YSCjmEO2GO8CDt6CX8ZpQnGdeu03WUCWtEPQ/uy0PUiNtIJjJZWnX0Cm3H55MOhbD1g+E/g==}
+
+  flowbite-svelte-icons@2.3.0:
+    resolution: {integrity: sha512-D7EeVAGt3NtufTjps8xKRYyZpAaQbuX+8PkohVqG07RsJf9pWJHwZ+RPBi3kUlECnq0WtYU/3jnLuz7Km4Y79g==}
+    peerDependencies:
+      svelte: ^5.0.0
 
   flowbite-svelte@1.12.6:
     resolution: {integrity: sha512-4Kaj20ogUfYMdgW8i+dFQn4d6UezJg2HxJL645HEJMXs5UoBFB+nXC8W6wtx5SVE1kAGuCkaddpc19G8AD5+pA==}
@@ -1473,6 +1481,12 @@ snapshots:
       flowbite: 2.5.2(rollup@4.46.2)
     transitivePeerDependencies:
       - rollup
+
+  flowbite-svelte-icons@2.3.0(svelte@5.38.1):
+    dependencies:
+      clsx: 2.1.1
+      svelte: 5.38.1
+      tailwind-merge: 3.3.1
 
   flowbite-svelte@1.12.6(rollup@4.46.2)(svelte@5.38.1)(tailwindcss@4.1.12):
     dependencies:
