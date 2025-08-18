@@ -2,16 +2,14 @@
   import { resolve } from "$app/paths";
   import type { PageProps } from "./$types";
   let { data }: PageProps = $props();
+  import { Listgroup } from "flowbite-svelte";
+  let links = data.posts.map((p) => ({
+    name: `${p.meta.title} - ${p.meta.date.toISOString()}`,
+    href: resolve(`/posts/${p.slug}`),
+  }));
 </script>
 
-<h1>Posts</h1>
-
-<ul>
-  {#each data.posts as post (post.slug)}
-    <li>
-      <a href={resolve(`/posts/${post.slug}`)}
-        >{post.meta.title} - {post.meta.date.toISOString()}</a
-      >
-    </li>
-  {/each}
-</ul>
+<div class="prose mx-auto">
+  <h2>Posts</h2>
+  <Listgroup active items={links} class="w-96" />
+</div>
