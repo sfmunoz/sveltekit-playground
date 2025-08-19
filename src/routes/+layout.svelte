@@ -9,6 +9,7 @@
     FooterLinkGroup,
     FooterLink,
   } from "flowbite-svelte";
+  import { Button } from "flowbite-svelte";
 
   let { children } = $props();
 </script>
@@ -26,8 +27,12 @@
       >
     </NavBrand>
     <NavUl>
-      <NavLi href={resolve("/")}>Home</NavLi>
-      <NavLi href={resolve("/posts")}>Posts</NavLi>
+      <NavLi href={resolve("/")}
+        ><Button color="primary" size="xs" outline>Home</Button></NavLi
+      >
+      <NavLi href={resolve("/posts")}
+        ><Button color="secondary" size="xs" outline>Posts</Button></NavLi
+      >
     </NavUl>
   </Navbar>
 </header>
