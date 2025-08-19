@@ -52,14 +52,14 @@
     <FooterLinkGroup
       class="mb-6 flex flex-wrap items-center justify-center text-gray-900 dark:text-white"
     >
-      <FooterLink aClass="mr-4 hover:underline md:mr-6" href={resolve("/")}
+      <FooterLink class="mr-4 hover:underline md:mr-6" href={resolve("/")}
         >Home</FooterLink
       >
-      <FooterLink aClass="mr-4 hover:underline md:mr-6" href={resolve("/posts")}
+      <FooterLink class="mr-4 hover:underline md:mr-6" href={resolve("/posts")}
         >Posts</FooterLink
       >
       <FooterLink
-        aClass="mr-4 hover:underline md:mr-6"
+        class="mr-4 hover:underline md:mr-6"
         href="https://github.com/sfmunoz">Github</FooterLink
       >
     </FooterLinkGroup>
