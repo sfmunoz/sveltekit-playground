@@ -10,7 +10,7 @@
   }));
 </script>
 
-<div class="prose mx-auto">
-  <h2>Posts</h2>
-  <Listgroup active items={links} class="w-96" />
-</div>
+<h1 class="text-gray-800 dark:text-white font-bold text-3xl text-center my-4">
+  Posts
+</h1>
+<Listgroup active items={links} class="mx-auto w-96" />
