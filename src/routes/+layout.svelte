@@ -2,14 +2,15 @@
   import "../app.css";
   import favicon from "$lib/assets/favicon.svg";
   import { resolve } from "$app/paths";
-  import { Navbar, NavBrand, NavUl, NavLi } from "flowbite-svelte";
-  import {
-    Footer,
-    FooterBrand,
-    FooterLinkGroup,
-    FooterLink,
-  } from "flowbite-svelte";
-  import { Button } from "flowbite-svelte";
+  import Navbar from "flowbite-svelte/Navbar.svelte";
+  import NavBrand from "flowbite-svelte/NavBrand.svelte";
+  import NavUl from "flowbite-svelte/NavUl.svelte";
+  import NavLi from "flowbite-svelte/NavLi.svelte";
+  import Footer from "flowbite-svelte/Footer.svelte";
+  import FooterBrand from "flowbite-svelte/FooterBrand.svelte";
+  import FooterLinkGroup from "flowbite-svelte/FooterLinkGroup.svelte";
+  import FooterLink from "flowbite-svelte/FooterLink.svelte";
+  import Button from "flowbite-svelte/Button.svelte";
 
   let { children } = $props();
 </script>

@@ -1,13 +1,12 @@
 <script lang="ts">
   import { resolve } from "$app/paths";
   import type { PageProps } from "./$types";
+  import Table from "flowbite-svelte/Table.svelte";
+  import TableBody from "flowbite-svelte/TableBody.svelte";
+  import TableBodyCell from "flowbite-svelte/TableBodyCell.svelte";
+  import TableBodyRow from "flowbite-svelte/TableBodyRow.svelte";
+
   let { data }: PageProps = $props();
-  import {
-    Table,
-    TableBody,
-    TableBodyCell,
-    TableBodyRow,
-  } from "flowbite-svelte";
 </script>
 
 <div class="mx-auto prose">{@html data.html}</div>

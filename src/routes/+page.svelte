@@ -1,7 +1,8 @@
 <script lang="ts">
   import { resolve } from "$app/paths";
-  import { Button } from "flowbite-svelte";
-  import { Section, HeroHeader } from "flowbite-svelte-blocks";
+  import Button from "flowbite-svelte/Button.svelte";
+  import Section from "flowbite-svelte-blocks/Section.svelte";
+  import HeroHeader from "flowbite-svelte-blocks/HeroHeader.svelte";
 </script>
 
 <Section name="heroDefault">
