@@ -9,7 +9,7 @@
   let { data }: PageProps = $props();
 </script>
 
-<div class="mx-auto prose">{@html data.html}</div>
+<div class="mx-auto prose dark:prose-invert">{@html data.html}</div>
 
 <Table class="mx-auto max-w-fit">
   <TableBody>

@@ -11,6 +11,7 @@
   import FooterLinkGroup from "flowbite-svelte/FooterLinkGroup.svelte";
   import FooterLink from "flowbite-svelte/FooterLink.svelte";
   import Button from "flowbite-svelte/Button.svelte";
+  import DarkMode from "flowbite-svelte/DarkMode.svelte";
 
   let { children } = $props();
 </script>
@@ -34,6 +35,7 @@
       <NavLi href={resolve("/posts")}
         ><Button color="secondary" size="xs" outline>Posts</Button></NavLi
       >
+      <DarkMode />
     </NavUl>
   </Navbar>
 </header>
