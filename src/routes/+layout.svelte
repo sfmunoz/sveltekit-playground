@@ -11,7 +11,7 @@
   import FooterLinkGroup from "flowbite-svelte/FooterLinkGroup.svelte";
   import FooterLink from "flowbite-svelte/FooterLink.svelte";
   import Button from "flowbite-svelte/Button.svelte";
-  import DarkMode from "flowbite-svelte/DarkMode.svelte";
+  import DarkMode from "$lib/components/DarkMode";
 
   let { children } = $props();
 </script>
