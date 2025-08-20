@@ -12,6 +12,7 @@
   import FooterLink from "flowbite-svelte/FooterLink.svelte";
   import Button from "flowbite-svelte/Button.svelte";
   import DarkMode from "$lib/components/DarkMode";
+  import NavHamburger from "flowbite-svelte/NavHamburger.svelte";
 
   let { children } = $props();
 </script>
@@ -28,6 +29,7 @@
         >SvelteKit playground</span
       >
     </NavBrand>
+    <NavHamburger />
     <NavUl>
       <NavLi href={resolve("/")}
         ><Button color="primary" size="xs" outline>Home</Button></NavLi
