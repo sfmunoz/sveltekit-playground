@@ -12,8 +12,12 @@
   import FooterLink from "flowbite-svelte/FooterLink.svelte";
   import Button from "flowbite-svelte/Button.svelte";
   import DarkMode from "$lib/components/DarkMode";
+  import NavHamburger from "flowbite-svelte/NavHamburger.svelte";
+  import type { NavbarBreakpoint } from "flowbite-svelte"; // doesn't seem to hurt compilation time
 
   let { children } = $props();
+
+  let breakpoint: NavbarBreakpoint = "md";
 </script>
 
 <svelte:head>
@@ -21,13 +25,14 @@
 </svelte:head>
 
 <header>
-  <Navbar>
+  <Navbar {breakpoint}>
     <NavBrand href={resolve("/")}>
       <span
         class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
         >SvelteKit playground</span
       >
     </NavBrand>
+    <NavHamburger />
     <NavUl>
       <NavLi href={resolve("/")}
         ><Button color="primary" size="xs" outline>Home</Button></NavLi
@@ -35,7 +40,7 @@
       <NavLi href={resolve("/posts")}
         ><Button color="secondary" size="xs" outline>Posts</Button></NavLi
       >
-      <DarkMode />
+      <DarkMode {breakpoint} />
     </NavUl>
   </Navbar>
 </header>
