@@ -5,6 +5,9 @@
   import MoonSolid from "flowbite-svelte-icons/MoonSolid.svelte";
   import DesktopPcOutline from "flowbite-svelte-icons/DesktopPcOutline.svelte";
   import QuestionCircleOutline from "flowbite-svelte-icons/QuestionCircleOutline.svelte";
+  import type { NavbarBreakpoint } from "flowbite-svelte"; // doesn't seem to hurt compilation time
+
+  let { breakpoint }: { breakpoint: NavbarBreakpoint } = $props();
   type UsrChoice = "light" | "dark" | "system";
   type SysChoice = "light" | "dark" | "unknown";
   const t: string | null = browser ? localStorage.getItem("theme") : null;
@@ -43,9 +46,6 @@
     };
   });
   const usrThemes: UsrChoice[] = ["light", "system", "dark"];
-  // const overC =
-  //   "absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[58%] scale-60 z-10";
-  const overC = "absolute -translate-x-[60%] -translate-y-[50%]";
 </script>
 
 {#snippet icon(t: UsrChoice)}
@@ -70,7 +70,9 @@
   {/if}
 {/snippet}
 
-<div class="grid grid-cols-3 ml-4 justify-center items-center gap-1">
+<div
+  class={`grid grid-cols-1 ${breakpoint}:grid-cols-3 ml-4 justify-center items-center gap-1`}
+>
   {#each usrThemes as t (t)}
     <Button
       id={t}
