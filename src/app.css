@@ -35,6 +35,9 @@
   --color-secondary-700: var(--color-cyan-700);
   --color-secondary-800: var(--color-cyan-800);
   --color-secondary-900: var(--color-cyan-900);
+
+  --color-light: var(--color-white);
+  --color-dark: var(--color-gray-800);
 }
 
 @layer base {

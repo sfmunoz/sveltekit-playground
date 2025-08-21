@@ -10,7 +10,7 @@
   }));
 </script>
 
-<h1 class="text-gray-800 dark:text-white font-bold text-3xl text-center my-4">
+<h1 class="text-dark dark:text-light font-bold text-3xl text-center my-4">
   Posts
 </h1>
 <Listgroup active items={links} class="mx-auto w-96" />

@@ -52,13 +52,13 @@
     <FooterBrand
       href="https://github.com/sfmunoz/sveltekit-playground"
       name="SvelteKit playground @ Github"
-      aClass="flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white"
+      aClass="flex justify-center items-center text-2xl font-semibold"
     />
     <p class="my-6 text-gray-500 dark:text-gray-400">
       Simple project to learn and play with SvelteKit
     </p>
     <FooterLinkGroup
-      class="mb-6 flex flex-wrap items-center justify-center text-gray-900 dark:text-white"
+      class="mb-6 flex flex-wrap items-center justify-center text-dark dark:text-light"
     >
       <FooterLink class="mr-4 hover:underline md:mr-6" href={resolve("/")}
         >Home</FooterLink
@@ -71,7 +71,7 @@
         href="https://github.com/sfmunoz">Github</FooterLink
       >
     </FooterLinkGroup>
-    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+    <span class="text-sm sm:text-center text-gray-500 dark:text-gray-400">
       © 2025 <a href="https://sfmunoz.com/" class="hover:underline">sfmunoz</a
       >. All Rights Reserved.
     </span>
